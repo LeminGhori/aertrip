@@ -62,7 +62,7 @@ function MultipleSelect({ fieldName, apiEndpoint, maxSelectLimit, action }) {
           console.error("Error fetching data:", error);
         });
     } catch {
-      console.error("Error fetching data:", error);
+      console.error("Error fetching data:");
     }
 
   }, [apiEndpoint]);
