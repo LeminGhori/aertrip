@@ -1,0 +1,131 @@
+.flight-model {
+  overflow: hidden;
+}
+.trip-image {
+  background-image: url("../../assets/images/home-image-2.webp"); /* Replace with your image URL */
+  background-size: cover; /* Ensures the image covers the entire element */
+  background-position: center; /* Centers the image */
+  border-bottom-left-radius: 40px; /* Bottom left corner radius */
+  border-bottom-right-radius: 40px; /* Bottom right corner radius */
+  overflow: hidden; /* Ensures the content fits within the rounded corners */
+  height: 90vh; /* Set the height to 85% of the viewport height */
+  aspect-ratio: auto; /* Maintain the image aspect ratio */
+  position: relative;
+}
+.home-text {
+  position: absolute;
+  bottom: 20%;
+  right: 20%;
+  font-weight: 700;
+  font-size: 3rem;
+  color: white;
+}
+
+.home-contener {
+  margin: 65px 5% 0 5%;
+  width: calc(100% - 10%);
+  background: white;
+  border-radius: 14px;
+  padding: 16px;
+  box-shadow: 0 4px 8px 0 color(display-p3 0.70196 0.76078 0.82353 / 50%);
+}
+
+.flight-section-1 {
+  display: flex;
+  justify-content: space-between;
+  color: #646464;
+  font-weight: 600;
+  flex-wrap: wrap;
+  margin-bottom: 1.5rem;
+}
+
+.section-1-left {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.flight-section-2 {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.section-1 {
+  width: 28%;
+  display: flex;
+  min-width: 250px;
+  align-items: center;
+}
+.MuiFormControl-root {
+  width: 100% !important;
+}
+.g-1 {
+  gap: 10px;
+}
+
+.dark-btn {
+  min-width: 110px;
+  height: 45px;
+  padding: 11px 28px;
+  margin-top: 6px;
+  border: none;
+  font-size: 16px; /* Adjust font size as needed */
+  font-weight: bold; /* Adjust font weight as needed */
+  cursor: pointer; /* Show pointer cursor on hover */
+  outline: none; /* Remove default focus outline */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add shadow for depth */
+  transition: background-color 0.3s, box-shadow 0.3s; /* Smooth transition on hover */
+  font-weight: 500 !important;
+  font-size: 1.2rem !important;
+  color: #2ac1bc !important;
+  border: 1px solid #2ac1bc !important;
+}
+
+.dark-btn:hover {
+  background: linear-gradient(to right, #2ac1bc, #00cc99);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  color: white !important;
+}
+
+.MuiSelect-select {
+  font-weight: 600 !important;
+}
+
+.MuiInputBase-input {
+  font-weight: 600 !important;
+}
+
+.footer {
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+.footer-text {
+  font-weight: 600;
+  font-size: 1.5rem;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.reverse {
+  cursor: pointer;
+}
+@media (max-width: 480px) {
+  .flex-column {
+    min-width: auto;
+  }
+}
+@media (max-width: 1024px) {
+  .home-contener-flight {
+    margin-top: 262px !important;
+  }
+}
+@media (max-width: 480px) {
+  .home-contener-flight {
+    margin-top: 226px !important;
+  }
+}

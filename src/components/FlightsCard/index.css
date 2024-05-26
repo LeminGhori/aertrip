@@ -1,0 +1,154 @@
+.flight-card {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: center;
+}
+.flight-contener {
+  margin: 16px 5% 0 5%;
+  width: calc(100% - 10%);
+  background: white;
+  border-radius: 14px;
+  padding: 16px;
+  box-shadow: 0 4px 8px 0 color(display-p3 0.70196 0.76078 0.82353 / 50%);
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  flex-wrap: wrap;
+}
+
+.flight-contener:hover {
+  box-shadow: 0 4px 8px 0 color(display-p3 0.70196 0.76078 0.82353 / 90%);
+}
+.flight-card:hover .dark-btn {
+  background: linear-gradient(to right, #2ac1bc, #00cc99);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  color: white !important;
+}
+.card-upper {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.flight-card-item {
+  display: flex;
+  gap: 12px;
+  width: 100%;
+}
+
+.flight-logo {
+  height: 30px;
+  width: 30px;
+}
+
+.flight-name {
+  font-size: 0.8rem;
+  color: rgb(93, 93, 93);
+  font-weight: 600;
+}
+
+.item-upper {
+  display: flex;
+  justify-content: space-between;
+}
+.mid-item-upper {
+  font-weight: 700;
+  font-size: 1.25rem;
+}
+.time {
+  color: color(display-p3 0.32 0.93 0.96);
+}
+
+.flex-column {
+  flex-direction: column;
+  min-width: 400px;
+  gap: 6px !important;
+}
+.item-bottom {
+  display: flex;
+  justify-content: space-between;
+  color: rgb(93, 93, 93);
+  font-weight: 600;
+  align-items: center;
+}
+
+.flight-border {
+  height: 4px;
+  border-top: 3px dotted rgb(93, 93, 93);
+  width: 65%;
+}
+
+.flex-end {
+  justify-content: end;
+}
+.price-div {
+  display: flex;
+  gap: 4px;
+  flex-direction: column;
+}
+
+.price-upper {
+  background-color: wheat;
+  /* color: color(display-p3 0.32 0.93 0.96); */
+  font-size: 1.25rem;
+  border-radius: 4px;
+  padding: 2px 6px;
+  font-weight: 600;
+}
+
+.price-bottom {
+  justify-content: end;
+  display: flex;
+  color: rgb(93, 93, 93);
+  font-weight: 600;
+  font-size: 0.75rem;
+}
+
+.book-btn {
+  font-size: 1rem !important;
+  font-weight: bold !important;
+  padding: 4px 16px !important;
+}
+
+.card-bottm {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.color-comment {
+  width: 110px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.comment {
+  color: color(display-p3 0.32 0.93 0.96);
+}
+
+.color-comment svg {
+  height: 0.75em;
+  width: 0.75em;
+}
+
+.bag {
+  display: flex;
+  color: gray;
+  font-size: 0.6rem;
+  gap: 4px;
+}
+
+.f-end {
+  justify-content: end;
+  color: rgb(222, 160, 45);
+  font-weight: 700;
+}
+.m-10 {
+  margin-bottom: 1px;
+}
+.seat-left {
+  align-items: end;
+  display: flex;
+}

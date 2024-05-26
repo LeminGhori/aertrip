@@ -1,0 +1,192 @@
+/* DropDown.css */
+.dropdown {
+  position: relative;
+  display: inline-block;
+  width: auto;
+}
+
+.dropdown-header {
+  font-size: 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.dropdown-header:hover {
+  color: color(display-p3 0 0.59216 0.44314); /* Change text color on hover */
+}
+
+.dropdown-list {
+  position: absolute;
+  top: 32px;
+  left: 0;
+  right: 0;
+  background-color: white;
+  border-top: none;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  max-height: 200px;
+  overflow-y: auto;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  width: 240px;
+  border-radius: 8px;
+}
+
+.dropdown-item {
+  padding: 10px;
+  font-size: 16px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  background-color: color(display-p3 1 1 1);
+}
+
+.dropdown-item:hover {
+  background-color: color(display-p3 0 0 0 / 4%) !important;
+}
+
+.dropdown-item.active {
+  background-color: color(display-p3 0 0.8 0.6 / 20%) !important;
+}
+
+.dropdown-item-icon {
+  margin-right: 8px;
+}
+/* custom.css */
+.custom-dropdown {
+  position: relative;
+  display: inline-block;
+  width: auto;
+}
+
+.custom-dropdown-header {
+  font-size: 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
+}
+
+.custom-dropdown-header:hover {
+  color: color(display-p3 0 0.59216 0.44314); /* Change text color on hover */
+}
+
+.custom-dropdown-list {
+  position: absolute;
+  top: 32px;
+  left: 0;
+  right: 0;
+  background-color: white;
+  border-top: none;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  max-height: 256px;
+  overflow-y: auto;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  width: 342px;
+  border-radius: 8px;
+}
+
+.custom-dropdown-item {
+  padding: 10px;
+  font-size: 16px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  background-color: color(display-p3 1 1 1);
+}
+
+.custom-dropdown-item-icon {
+  margin-right: 8px;
+}
+
+.custom-dropdown-item-content {
+  display: flex;
+  gap: 4px;
+  margin-left: 8px;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.custom-counter {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.custom-counter button {
+  width: 24px;
+  height: 24px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: white;
+  cursor: pointer;
+}
+
+.custom-counter span {
+  width: 24px;
+  text-align: center;
+  padding: 10px;
+  background: #ededed;
+  border-radius: 8px;
+  font-weight: 600;
+}
+
+.airlines-warning {
+  color: color(display-p3 1 0.56471 0);
+  height: 36px;
+  transition: opacity 0.5s ease-out;
+  opacity: 1;
+  margin: 16px;
+  overflow: visible;
+  text-align: center;
+}
+
+.airlines-warning.hide {
+  opacity: 0;
+  transition: opacity 0.4s ease-in;
+}
+.option-label-sub {
+  color: rgb(118, 118, 118);
+  font-size: 0.8rem;
+}
+.option-label {
+  font-weight: 600;
+  gap: 10px;
+  display: flex;
+  align-items: end;
+}
+
+.city-li-mean {
+  display: flex;
+  width: 100%;
+  align-items: center;
+}
+.city-label {
+  font-weight: 600;
+  font-size: 0.8rem;
+  width: 50px;
+}
+
+.city-label-sub {
+  color: rgb(118, 118, 118);
+  font-size: 0.7rem;
+  width: 100%;
+  overflow: hidden; /* Hide the overflow */
+  white-space: nowrap; /* Prevent text from wrapping to the next line */
+  text-overflow: ellipsis; /* Add ellipsis (...) when text overflows */
+}
+
+.slider-range-values {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.75rem;
+}

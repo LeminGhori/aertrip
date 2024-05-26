@@ -1,0 +1,57 @@
+.flight {
+  color: black;
+}
+
+.home-contener-flight {
+  margin-top: 62px;
+  width: 98%;
+  background: white;
+  padding: 16px;
+  box-shadow: 0 4px 8px 0 color(display-p3 0.70196 0.76078 0.82353 / 50%);
+}
+.filter-icons {
+  color: color(display-p3 0 0.62745 0.65882);
+}
+.filter {
+  display: flex;
+  gap: 12px;
+  width: 100%;
+  flex-wrap: wrap;
+  margin-top: 24px;
+  padding: 0 24px;
+}
+.filter-conteners {
+  display: flex;
+  gap: 4px;
+  background-color: #dddddd;
+  padding: 4px 10px;
+  border-radius: 30px;
+  min-width: 48px;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  color: #545454;
+}
+.filter-conteners:hover {
+  background-color: #b6b6b6;
+}
+
+.show-flight {
+  padding: 0 24px;
+  margin: 16px 0;
+  font-weight: 600;
+  color: rgb(175, 175, 175);
+  font-size: 0.75rem;
+  display: flex;
+  gap: 4px;
+  font-weight: 700 !important;
+}
+.of-flights {
+  border-bottom: 1px solid gray;
+}
+.not-found {
+  display: flex;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 1.25rem;
+}

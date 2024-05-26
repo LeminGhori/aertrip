@@ -1,0 +1,174 @@
+.layout {
+  width: 100%;
+  position: relative;
+}
+
+.sticky .layout-content {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000; /* Adjust z-index as needed */
+}
+
+.layout-content {
+  position: absolute;
+  padding: 0 24px;
+  width: 100%;
+  height: 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+  box-sizing: border-box; /* Ensures padding is included in the total width */
+}
+
+.layout-logo {
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.layout-logo img {
+  height: 100%;
+  max-width: 100%; /* Set maximum width to 100% */
+}
+
+.layout-tabs {
+  display: flex;
+  gap: 45px;
+  height: 100%;
+  align-items: center;
+  font-size: 1rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.tab-item {
+  cursor: pointer;
+  padding: 8px 32px;
+  background-color: transparent; /* Default background color (transparent) */
+  transition: background-color 0.3s; /* Smooth transition for background color */
+  border-radius: 32px;
+}
+
+.tab-item:hover {
+  background-color: rgba(
+    50,
+    50,
+    50,
+    0.2
+  ); /* Semi-transparent background for hover */
+}
+
+.tab-item.active {
+  background-color: rgba(
+    50,
+    50,
+    50,
+    0.5
+  ); /* Semi-transparent background for active */
+}
+
+.layout-profile {
+  display: flex;
+  gap: 32px;
+  height: 100%;
+
+  align-items: center;
+  font-size: 1.25rem;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.profile-item {
+  padding: 8px 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  box-sizing: border-box; /* Ensures padding is included in the total width */
+  cursor: pointer;
+  background-color: transparent; /* Default background color (transparent) */
+  transition: background-color 0.3s; /* Smooth transition for background color */
+  border-radius: 32px;
+}
+
+.profile-item:hover {
+  background-color: rgba(
+    50,
+    50,
+    50,
+    0.2
+  ); /* Semi-transparent background for hover */
+}
+
+.profile-item img {
+  height: 40px;
+  max-width: 100%; /* Set maximum width to 100% */
+  border-radius: 50%;
+}
+
+/* Media Queries for Responsive Design */
+
+@media (max-width: 1024px) {
+  .layout-logo img {
+    height: 90px;
+  }
+  .layout-content {
+    flex-direction: column;
+    height: auto;
+    padding: 10px;
+    gap: 18px;
+  }
+
+  .layout-logo,
+  .layout-tabs,
+  .layout-profile {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .layout-logo {
+    margin-bottom: 10px;
+  }
+
+  .layout-tabs {
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 10px;
+  }
+
+  .layout-profile {
+    gap: 20px;
+  }
+
+  .tab-item {
+    padding: 8px 16px;
+    font-size: 0.8rem;
+  }
+
+  .profile-item {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .layout-content {
+    padding: 5px;
+    gap: 8px;
+  }
+
+  .tab-item {
+    padding: 8px 12px;
+    font-size: 0.7rem;
+  }
+
+  .profile-item {
+    font-size: 0.8rem;
+  }
+}
+
+.flight-model {
+  min-height: 90vh;
+}
