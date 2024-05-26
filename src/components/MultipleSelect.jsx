@@ -37,29 +37,34 @@ function MultipleSelect({ fieldName, apiEndpoint, maxSelectLimit, action }) {
   const [names, setNames] = React.useState({});
 
   React.useEffect(() => {
-    axios
-      .get(apiEndpoint)
-      .then((response) => {
-        if (
-          response.data.data &&
-          response.data.data.flights &&
-          Array.isArray(response.data.data.flights)
-        ) {
-          const firstFlight = response.data.data.flights[0];
-          if (firstFlight && firstFlight.results.apdet) {
-            setNames(firstFlight.results.apdet);
+    try {
+      axios
+        .get(apiEndpoint)
+        .then((response) => {
+          if (
+            response.data.data &&
+            response.data.data.flights &&
+            Array.isArray(response.data.data.flights)
+          ) {
+            const firstFlight = response.data.data.flights[0];
+            if (firstFlight && firstFlight.results.apdet) {
+              setNames(firstFlight.results.apdet);
+            } else {
+              console.warn(
+                "apdet is undefined or not an object in the first flight"
+              );
+            }
           } else {
-            console.warn(
-              "apdet is undefined or not an object in the first flight"
-            );
+            console.warn("flights is undefined or not an array");
           }
-        } else {
-          console.warn("flights is undefined or not an array");
-        }
-      })
-      .catch((error) => {
-        console.error("Error fetching data:", error);
-      });
+        })
+        .catch((error) => {
+          console.error("Error fetching data:", error);
+        });
+    } catch {
+      console.error("Error fetching data:", error);
+    }
+
   }, [apiEndpoint]);
 
   const memoizedNames = React.useMemo(() => names, [names]);
