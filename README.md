@@ -1,4 +1,4 @@
-![oneFlight](https://github.com/LeminGhori/aertrip/assets/113108356/0036767e-01de-45e8-9072-9e156e0134f1)# Getting Started with Create React App
+Please run this project http://localhost:3000/
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
