@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./index.css";
 import DropDown from "../../components/DropDown";
 import ArrowRightAltIcon from "@mui/icons-material/ArrowRightAlt";
@@ -24,6 +24,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { Button } from "@mui/material";
 import { ToastContainer, toast } from "react-toastify";
 import { useNavigate } from "react-router-dom";
+import ReactGA from 'react-ga4'; // Import ReactGA
 
 import "react-toastify/dist/ReactToastify.css";
 
@@ -84,8 +85,13 @@ function Home() {
     const passenger = useSelector((state) => state.flight);
     const dispatch = useDispatch();
     const navigate = useNavigate();
+
     const handleReverse = () => {
         dispatch(reverseFlight());
+        ReactGA.event({
+            category: "Flight Search",
+            action: "Reversed From and To locations",
+        });
     };
 
     const handleFlightSubmit = () => {
@@ -110,6 +116,11 @@ function Home() {
         if (isEmpty) {
             toast.error("Please fill in all required fields.");
         } else {
+            ReactGA.event({
+                category: "Flight Search",
+                action: "Submitted flight search",
+                label: `From: ${passenger.from}, To: ${passenger.to}, Depart: ${passenger.depart}, Return: ${passenger.return}`,
+            });
             console.log("Form submitted successfully!");
             navigate("flights");
         }
@@ -126,6 +137,11 @@ function Home() {
                                     options={wayOptions}
                                     action={setWayOptions}
                                     value={passenger?.wayOptions}
+                                    onChange={() => ReactGA.event({
+                                        category: "Flight Search",
+                                        action: "Selected Way Option",
+                                        label: passenger.wayOptions,
+                                    })}
                                 />
                             </div>
                             <div className="section-1-left-2">
@@ -133,6 +149,11 @@ function Home() {
                                     options={passengerOptions}
                                     title="Passenger"
                                     TitleIcon={BoyIcon}
+                                    onChange={() => ReactGA.event({
+                                        category: "Flight Search",
+                                        action: "Selected Passenger Options",
+                                        label: JSON.stringify(passenger.passengerOptions),
+                                    })}
                                 />
                             </div>
                             <div className="section-1-left-3">
@@ -140,6 +161,11 @@ function Home() {
                                     options={seatsOptions}
                                     action={setSeatsOptions}
                                     value={passenger?.seatsOptions}
+                                    onChange={() => ReactGA.event({
+                                        category: "Flight Search",
+                                        action: "Selected Seat Option",
+                                        label: passenger.seatsOptions,
+                                    })}
                                 />
                             </div>
                         </div>
@@ -149,6 +175,10 @@ function Home() {
                                     options={recentSearchesOptions}
                                     left={"formTo"}
                                     action={recentSearches}
+                                    onChange={() => ReactGA.event({
+                                        category: "Flight Search",
+                                        action: "Selected Recent Search",
+                                    })}
                                 />
                             </div>
                         </div>

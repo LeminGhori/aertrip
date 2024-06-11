@@ -30,7 +30,7 @@ import axios from "axios";
 import dayjs from "dayjs";
 import { debounce } from "lodash";
 import { ToastContainer, toast } from "react-toastify";
-
+import ReactGA from 'react-ga4'; // Add import for ReactGA
 const wayOptions = [
     { value: "oneway", label: "Oneway", icon: ArrowRightAltIcon },
     { value: "return", label: "Return", icon: CompareArrowsIcon },
@@ -188,6 +188,12 @@ function Flights() {
     }, []);
 
     const handleSearch = () => {
+        ReactGA.event({
+            category: 'Button Click',
+            action: 'Search Flights',
+            label: 'Search Button Clicked'
+        });
+
         let requiredFields = ["wayOptions", "seatsOptions", "from", "to", "depart"];
 
         if (passenger.wayOptions !== "oneway") {

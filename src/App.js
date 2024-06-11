@@ -1,20 +1,26 @@
 import "./App.css";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
+import { useEffect } from "react";
 import ErrorPage from "./pages/ErrorPage/ErrorPage.jsx";
 import Layout from "./modules/Layout/Layout.jsx";
 import Home from "./pages/Home/Home.jsx";
 import Flights from "./pages/Flights/Flights.jsx";
 import ReactGA from 'react-ga4';
-import { useEffect } from "react";
+
 const TRACKING_ID = "G-QQLJ0J7GDG"; // your Measurement ID
 
+function usePageViews() {
+  const location = useLocation();
 
-function App() {
   useEffect(() => {
     ReactGA.initialize(TRACKING_ID);
-    // Send pageview with a custom path
-    ReactGA.send({ hitType: "pageview", page: "/landingpage", title: "Landing Page" });
-  }, [])
+    ReactGA.send({ hitType: "pageview", page: location.pathname });
+  }, [location]);
+}
+
+function App() {
+  usePageViews();
+
   return (
     <BrowserRouter>
       <Routes>
